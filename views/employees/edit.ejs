@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Employee</title>
+    <link rel='stylesheet' href='./public/stylesheets/style.css' />
+</head>
+<body>
+<div class="container">
+    <h3><a href="/employees">Employee List</a></h3>
+    <h1>Edit Employee</h1>
+    <form action="/employees/update/<%= employee._id%>" method="post">
+        <table>
+            <tbody>
+            <tr>
+                <td>Name</td>
+                <td><label>
+                        <input type="text" name="name" value="<%= employee.name %>" />
+                    </label></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><label>
+                        <textarea name="address"><%= employee.address %></textarea>
+                    </label></td>
+            </tr>
+            <tr>
+                <td>Position</td>
+                <td><label>
+                        <input type="text" name="position" value="<%= employee.position %>" />
+                    </label></td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td><label>
+                        <input type="number" name="salary" value="<%= employee.salary %>" />
+                    </label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Update</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+</body>
+</html>
